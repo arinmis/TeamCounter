@@ -2,6 +2,7 @@ import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './login/Login';
 import Welcome from './welcome/Welcome';
+import Singup from './signup/Singup';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ function Routes() {
         options={{headerShown: false}}
       />
       <Stack.Screen name="welcome" component={Welcome} />
+      <Stack.Screen name="singup" component={Singup} />
     </Stack.Navigator>
   );
 }
