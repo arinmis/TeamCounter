@@ -5,7 +5,7 @@ import CustomButton from '../components/custom_button/CustomButton';
 const Login = ({navigation}) => {
   function handleClick() {
     console.log('here');
-    navigation.navigate('welcome');
+    navigation.push('welcome');
   }
 
   return (
