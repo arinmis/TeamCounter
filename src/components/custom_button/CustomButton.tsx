@@ -12,7 +12,6 @@ function CustomButton({onPress, title}) {
 const styles = StyleSheet.create({
   button: {
     alignItems: 'center',
-    alignSelf: 'flex-start',
     borderRadius: 10,
     backgroundColor: '#008080',
     paddingHorizontal: 30,
