@@ -1,15 +1,22 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, ScrollView} from 'react-native';
 
 function Content({children}) {
-  return <View style={styles.main}>{children}</View>;
+  return (
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.main}>{children}</ScrollView>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
   main: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     padding: 20,
+  },
+  container: {
+    flex: 1,
   },
 });
 
