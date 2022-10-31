@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Text, TextInput} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
 import CustomButton from '../components/custom_button/CustomButton';
 import {AllSports} from '../images';
 import Content from '../components/Content';
 import PageImage from '../components/PageImage';
 import Link from '../components/Link';
+import CustomTextInput from '../components/CustomTextInput';
 
 const Login = ({navigation}) => {
   const [email, setEmail] = useState<string>('');
@@ -18,30 +19,27 @@ const Login = ({navigation}) => {
 
   return (
     <Content>
-      <PageImage src={AllSports} />
+      <PageImage src={AllSports} aspectRatio={135 / 76} />
       <Text>
         Organize your team for events like football, volleyball, basketball.
         Keep track of players, and share match information with others.
       </Text>
       <View style={styles.inputContainer}>
-        <TextInput
-          style={styles.input}
-          onChangeText={setEmail}
-          // onChangeText={onChangeNumber}
+        <CustomTextInput
+          onChange={setEmail}
           value={email}
-          placeholder="User name"
+          placeholder="Email"
+          secureTextEntry={false}
         />
-        <TextInput
-          style={styles.input}
-          onChangeText={setPassword}
-          // onChangeText={onChangeNumber}
+        <CustomTextInput
+          onChange={setPassword}
           value={password}
           secureTextEntry={true}
           placeholder="Password"
         />
       </View>
       <View style={styles.buttonContiner}>
-        <CustomButton onPress={handleClick} title="Login" />
+        <CustomButton onPress={handleClick} text="Login" />
       </View>
       <Link
         onPress={() => {
@@ -56,19 +54,9 @@ const Login = ({navigation}) => {
 const styles = StyleSheet.create({
   inputContainer: {
     width: '100%',
-    // flex: 2,
-    // alignItems: 'center',
     alignItems: 'center',
     paddingHorizontal: '10%',
     marginTop: '30%',
-  },
-  input: {
-    height: 40,
-    width: '100%',
-    margin: 12,
-    borderWidth: 1,
-    borderRadius: 35,
-    padding: 10,
   },
   buttonContiner: {
     marginTop: '12%',

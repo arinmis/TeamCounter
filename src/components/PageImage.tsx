@@ -1,8 +1,18 @@
 import React from 'react';
 import {Image, StyleSheet} from 'react-native';
 
-const PageImage = ({src}) => {
-  return <Image style={styles.image} source={src} />;
+const PageImage = ({src, aspectRatio}) => {
+  return (
+    <Image
+      style={[
+        styles.image,
+        {
+          aspectRatio: aspectRatio,
+        },
+      ]}
+      source={src}
+    />
+  );
 };
 
 const styles = StyleSheet.create({
@@ -11,7 +21,6 @@ const styles = StyleSheet.create({
     // Without height undefined it won't work
     height: undefined,
     // figure out your image aspect ratio
-    aspectRatio: 135 / 76,
     borderRadius: 5,
   },
 });

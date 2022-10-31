@@ -14,8 +14,12 @@ function Routes() {
         component={Login}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        name="singup"
+        component={Singup}
+        options={{headerShown: false}}
+      />
       <Stack.Screen name="welcome" component={Welcome} />
-      <Stack.Screen name="singup" component={Singup} />
     </Stack.Navigator>
   );
 }
