@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     padding: 20,
+    paddingTop: '20%',
   },
   container: {
     flex: 1,
