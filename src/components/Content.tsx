@@ -1,12 +1,16 @@
 import React from 'react';
-import {View} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 
-function Content(props) {
-  return (
-    <View {...props} style={[{padding: 20}, props.style]}>
-      {props.children}
-    </View>
-  );
+function Content({children}) {
+  return <View style={styles.main}>{children}</View>;
 }
+
+const styles = StyleSheet.create({
+  main: {
+    flex: 1,
+    alignItems: 'center',
+    padding: 20,
+  },
+});
 
 export default Content;
