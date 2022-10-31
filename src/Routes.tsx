@@ -19,7 +19,11 @@ function Routes() {
         component={Singup}
         options={{headerShown: false}}
       />
-      <Stack.Screen name="welcome" component={Welcome} />
+      <Stack.Screen
+        name="welcome"
+        component={Welcome}
+        options={{headerShown: false}}
+      />
     </Stack.Navigator>
   );
 }
