@@ -45,7 +45,7 @@ const Singup = ({navigation}) => {
         </View>
         <Link
           onPress={() => navigation.push('login')}
-          text="Don’t you have an account? Just singup."
+          text="Already have an acount? Click to login."
         />
       </View>
     </Content>
