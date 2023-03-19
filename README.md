@@ -13,7 +13,7 @@ Mobile application to help team organization for games like football, volleyball
 
 
 ### UI Wireframe 
-[Figma link](https://www.figma.com/file/lkF8H5HrCRQ6Glm8VgOifz/TeamCounter?node-id=0%3A1)
+[Figma link](https://www.figma.com/proto/lkF8H5HrCRQ6Glm8VgOifz/TeamCounter?node-id=42-302&scaling=scale-down&page-id=0%3A1)
 
 
 ### Assets sources
